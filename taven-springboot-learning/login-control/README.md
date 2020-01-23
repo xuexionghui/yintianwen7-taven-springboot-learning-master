@@ -1,0 +1,6 @@
+这个并发登录控制人数的项目，不需要依赖其他项目，可以直接使用，本项目可以独立运行
+项目有两种方式控制登录人数，默认是开启时间戳对比控制登陆人数。
+如果需要开启队列控制登录人数，就在配置文件application.properties不要注释queue-filter.enabled=true。
+时间戳登录模式就是默认一个账号只可以登录一个，而队列方式就可以控制登录的人数。
+CompareKickOutFilter.java  时间戳控制登录人数
+QueueKickOutFilter.java  队列控制登录人数
